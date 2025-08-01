@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar";
+import HeroTitle from "./components/HeroTitle";
+import RecentRadios from "./components/RecentRadios";
+import RadioList from "./components/RadioList";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen flex flex-col font-sans bg-blue-100 text-gray-800">
+      <Navbar />
+      <main className="flex-grow pt-16">
+        <HeroTitle />
+        <RecentRadios />
+        <RadioList />
+      </main>
+      <Footer />
     </div>
   );
 }
 
 export default App;
+

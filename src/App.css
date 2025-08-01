@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.wave-bg {
+  background: linear-gradient(to bottom right, #a0f0ff, #3bbdf2);
+  clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+.wave-bottom {
+  background: linear-gradient(to bottom right, #3bbdf2, #005577);
+  clip-path: ellipse(150% 100% at 50% 100%);
+}
+
