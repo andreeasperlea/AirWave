@@ -10,7 +10,7 @@ export default function RecentRadios() {
     setRecentRadios(stored);
   }, []);
 
-  if (recentRadios.length === 0) return null; // dacă nu există, nu afișăm secțiunea
+  if (recentRadios.length === 0) return null;
 
   return (
     <section className="bg-gradient-to-b from-[#dbeafe] to-white py-16 px-6 md:px-20 text-center space-y-10">

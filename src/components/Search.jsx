@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { STATIONS } from "../stations";
 
-export default function RadioList() {
+export default function Search() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
@@ -13,15 +13,12 @@ export default function RadioList() {
   const handleSelectStation = (station) => {
     navigate(`/radio/${station.id}`);
 
-    // Preluăm lista din localStorage
     const stored = JSON.parse(localStorage.getItem("recentRadios") || "[]");
-    // Eliminăm dublurile
     const filtered = stored.filter((s) => s.id !== station.id);
-    // Adăugăm radio-ul selectat în față și păstrăm max 3
     const updated = [station, ...filtered].slice(0, 3);
     localStorage.setItem("recentRadios", JSON.stringify(updated));
 
-    setQuery(""); // reset input
+    setQuery("");
   };
 
   return (
